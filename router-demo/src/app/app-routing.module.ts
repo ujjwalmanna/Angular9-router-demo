@@ -11,6 +11,8 @@ import { AuthGuard } from './auth.guard';
 import { CanDeactivateGuard } from './servers/edit-server/can-deactivate.guard';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { ServerResolverService } from './servers/server/server-resolver.service';
+import { HomeObserComponent } from './home-obser/home-obser.component';
+import { UserObserComponent } from './user-obser/user-obser.component';
 
 
 
@@ -27,8 +29,11 @@ const routes: Routes = [
     {path:':id',component:ServerComponent,resolve:{server:ServerResolverService}},
     {path:':id/edit',component:EditServerComponent,canDeactivate:[CanDeactivateGuard]}
   ]},
+  {path: 'observerdemo', component: HomeObserComponent},
+  {path: 'observerdemo/user/:id', component: UserObserComponent},
+ 
   //{path:'not-found',component:PageNotFoundComponent},
-  {path:'not-found',component:ErrorPageComponent,data:{message:'PAge not found!'}},
+  {path:'not-found',component:ErrorPageComponent,data:{message:'Page not found!'}},
   {path:'**',redirectTo:'not-found'}
 
   

@@ -12,6 +12,8 @@ import { ServerComponent } from './servers/server/server.component';
 import { UserComponent } from './users/user/user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { HomeObserComponent } from './home-obser/home-obser.component';
+import { UserObserComponent } from './user-obser/user-obser.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     EditServerComponent,
     ServerComponent,
     PageNotFoundComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    HomeObserComponent,
+    UserObserComponent
   ],
   imports: [
     BrowserModule,
